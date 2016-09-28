@@ -61,82 +61,73 @@ IMPORT ALL EVE FONTS
 }
 
 
-@keyframes expand-window {
-  from { width: 1px; height: 1px; }
-  to { width: 150px; height: 150px; }
+@keyframes expand-window-diagonal {
+  from { width: 0px; height: 0px; }
+  to { width: inherit; height: inherit; visibility: visible; }
+}
+@keyframes expand-window-width-height {
+  0%   { width: 0px; height: 0px; }
+  25%  { width: inherit; height: 0px; visibility: visible; }
+  100% { width: inherit; height: inherit; visibility: visible; }
+}
+@keyframes expand-window-height-width {
+  0%   { width: 0px; height: 0px; }
+  25%  { width: 0px; height: inherit; visibility: visible; }
+  100% { width: inherit; height: inherit; visibility: visible; }
 }
 
-.window1 {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  border: 1px solid #00FF00;
-
-  animation-name: expand-window;
-  animation-fill-mode: forwards;
-  animation-duration: 1s;
-  animation-delay: 2s;
+@keyframes hidden-to-visible {
+  from { visibility: hidden; }
+  to   { visibility: visible; }
 }
 
-.window2 {
-  position: relative;
-  left: -1px;
-  top: -1px;
-  height: 100%;
-  width: 100%;
-
-  border: 1px solid #FF0000;
-  border-radius: 6px;
-  border-left-color: #005500;
-  border-right-color: #005500;
-  border-top-color: #005500;
-  border-bottom-color: #005500;
-}
-
+/* main window styles */
 .placeholder {
   position: absolute;
-  padding: 0;
-  margin: 0;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
 }
-
-
 .window-corner {
   position: relative;
-  margin: 0;
-  padding: 0;
+  left: 0px;
+  top: 0px;
+  height: inherit;
+  width: inherit;
+  visibility: hidden;
   border: 1px solid #00FF00;
+  animation-name: expand-window-diagonal;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
-
 .window-inner {
   position: relative;
   left: -1px;
   top: -1px;
-  height: calc(100% + 2px);
-  width: calc(100% + 2px);
+  height: inherit;
+  width: inherit;
+  visibility: inherit;
+  border: 1px solid #005500;
   border-radius: 5px;
 }
+/* main window styles */
 
-.window-border-tb {
+.image-box {
   position: relative;
-  left: 3px;
-  top: 0;
-  width: calc(100% - 6px);
-  height: calc(100% - 2px);
-  border-top: 1px solid #005500;
-  border-bottom: 1px solid #005500;
+  visibility: hidden;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  border: 1px solid #999999;
+  animation-name: hidden-to-visible;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
-.window-border-lr {
+.text-box {
   position: relative;
-  left: -3px;
-  top: 2px;
-  width: calc(100% + 4px);
-  height: calc(100% - 4px);;
-  border-left: 1px solid #005500;
-  border-right: 1px solid #005500;
-}
-
-.window-caption {
-  padding: 5px 5px 5px 10px;
-  color: #00FF00;
+  visibility: hidden;
+  margin: 10px 30px 0px 0px;
+  border: 1px solid #999999;
+  animation-name: hidden-to-visible;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
