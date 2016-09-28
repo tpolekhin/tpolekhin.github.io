@@ -1,5 +1,7 @@
 .main {
   background-color: #000000;
+  padding-left: 100px;
+  padding-top: 100px;
 }
 
 .window-corner {
@@ -23,7 +25,7 @@
 
 .window-border-tb {
   position: relative;
-  left: 3;
+  left: 3px;
   top: 0;
   width: 296px;
   height: 300px;
@@ -34,7 +36,7 @@
 .window-border-lr {
   position: relative;
   left: -3px;
-  top: 2;
+  top: 2px;
   width: 300px;
   height: 296px;
   border-left: 1px solid #005500;
@@ -44,6 +46,6 @@
 .window-caption {
   padding: 5px 5px 5px 10px;
   color: #00FF00;
-  font: 14 EVESansNeue, Architects Daughter;
+  font: 14 EVESansNeue, Arial;
   font-style: normal;
 }
