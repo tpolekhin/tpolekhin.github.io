@@ -65,12 +65,28 @@ IMPORT ALL EVE FONTS
   from { width: 0px; height: 0px; }
   to { width: inherit; height: inherit; visibility: visible; }
 }
+@-webkit-keyframes expand-window-diagonal {
+  from { width: 0px; height: 0px; }
+  to { width: inherit; height: inherit; visibility: visible; }
+}
+
 @keyframes expand-window-width-height {
   0%   { width: 0px; height: 0px; }
   25%  { width: inherit; height: 0px; visibility: visible; }
   100% { width: inherit; height: inherit; visibility: visible; }
 }
+@-webkit-keyframes expand-window-width-height {
+  0%   { width: 0px; height: 0px; }
+  25%  { width: inherit; height: 0px; visibility: visible; }
+  100% { width: inherit; height: inherit; visibility: visible; }
+}
+
 @keyframes expand-window-height-width {
+  0%   { width: 0px; height: 0px; }
+  25%  { width: 0px; height: inherit; visibility: visible; }
+  100% { width: inherit; height: inherit; visibility: visible; }
+}
+@-webkit-keyframes expand-window-height-width {
   0%   { width: 0px; height: 0px; }
   25%  { width: 0px; height: inherit; visibility: visible; }
   100% { width: inherit; height: inherit; visibility: visible; }
@@ -80,6 +96,11 @@ IMPORT ALL EVE FONTS
   from { visibility: hidden; }
   to   { visibility: visible; }
 }
+@-webkit-keyframes hidden-to-visible {
+  from { visibility: hidden; }
+  to   { visibility: visible; }
+}
+
 
 /* main window styles */
 .placeholder {
