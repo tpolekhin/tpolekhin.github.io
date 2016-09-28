@@ -1,0 +1,49 @@
+.main {
+  background-color: #000000;
+}
+
+.window-corner {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #00FF00;
+}
+
+.window-inner {
+  position: relative;
+  left: -1px;
+  top: -1px;
+  height: 302px;
+  width: 302px;
+  background-color: #000000;
+  border-radius: 5px;
+}
+
+.window-border-tb {
+  position: relative;
+  left: 3;
+  top: 0;
+  width: 296px;
+  height: 300px;
+  border-top: 1px solid #005500;
+  border-bottom: 1px solid #005500;
+}
+
+.window-border-lr {
+  position: relative;
+  left: -3px;
+  top: 2;
+  width: 300px;
+  height: 296px;
+  border-left: 1px solid #005500;
+  border-right: 1px solid #005500;
+}
+
+.window-caption {
+  padding: 5px 5px 5px 10px;
+  color: #00FF00;
+  font: 14 EVESansNeue, Architects Daughter;
+  font-style: normal;
+}
