@@ -1,3 +1,10 @@
+@@import "https://github.com/zachanima/t3/blob/master/app/assets/fonts/evesansneue-regular.otf"
+@@font-face {
+  font-family: "EVE Sans Neue";
+  src: url(https://github.com/zachanima/t3/blob/master/app/assets/fonts/evesansneue-regular.otf) format("opentype");
+  font-weight: normal;
+}
+
 .main {
   background-color: #000000;
   padding-left: 100px;
@@ -46,6 +53,6 @@
 .window-caption {
   padding: 5px 5px 5px 10px;
   color: #00FF00;
-  font: 14 EVESansNeue, Arial;
+  font: 14 EVE Sans Neue, Arial;
   font-style: normal;
 }
