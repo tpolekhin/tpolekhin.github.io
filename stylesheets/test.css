@@ -1,8 +1,10 @@
-@@import "https://github.com/zachanima/t3/blob/master/app/assets/fonts/evesansneue-regular.otf"
-@@font-face {
-  font-family: "EVE Sans Neue";
-  src: url(https://github.com/zachanima/t3/blob/master/app/assets/fonts/evesansneue-regular.otf) format("opentype");
-  font-weight: normal;
+@font-face {
+  font-family: 'evesansneue-regular';
+  src: url('evesansneue-regular.otf') format('opentype');
+}
+@font-face {
+  font-family: 'evesansneue-condensed';
+  src: url('evesansneue-condensed.otf') format('opentype');
 }
 
 .main {
@@ -53,6 +55,11 @@
 .window-caption {
   padding: 5px 5px 5px 10px;
   color: #00FF00;
-  font: 14 EVE Sans Neue, Arial;
-  font-style: normal;
+  font: 12px evesansneue-regular, Arial;
+}
+
+.window-caption-c {
+  padding: 5px 5px 5px 10px;
+  color: #00FF00;
+  font: 12px evesansneue-condensed, Arial;
 }
