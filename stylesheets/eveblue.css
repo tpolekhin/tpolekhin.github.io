@@ -1,0 +1,183 @@
+/*
+IMPORT ALL EVE FONTS
+*/
+@font-face {
+  font-family: 'evesansneue-bold';
+  src: url('fonts/evesansneue-bold.otf') format('opentype');
+}
+@font-face {
+  font-family: 'evesansneue-bolditalic';
+  src: url('fonts/evesansneue-bolditalic.otf') format('opentype');
+}
+@font-face {
+  font-family: 'evesansneue-italic';
+  src: url('fonts/evesansneue-italic.otf') format('opentype');
+}
+@font-face {
+  font-family: 'evesansneue-regular';
+  src: url('fonts/evesansneue-regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'evesansneue-condensed';
+  src: url('fonts/evesansneue-condensed.otf') format('opentype');
+}
+@font-face {
+  font-family: 'evesansneue-condensedbold';
+  src: url('fonts/evesansneue-condensedbold.otf') format('opentype');
+}
+@font-face {
+  font-family: 'evesansneue-condensedbolditalic';
+  src: url('fonts/evesansneue-condensedbolditalic.otf') format('opentype');
+}
+@font-face {
+  font-family: 'evesansneue-condenseditalic';
+  src: url('fonts/evesansneue-condenseditalic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'evesansneue-expanded';
+  src: url('fonts/evesansneue-expanded.otf') format('opentype');
+}
+@font-face {
+  font-family: 'evesansneue-expandedbold';
+  src: url('fonts/evesansneue-expandedbold.otf') format('opentype');
+}
+@font-face {
+  font-family: 'evesansneue-expandedbolditalic';
+  src: url('fonts/evesansneue-expandedbolditalic.otf') format('opentype');
+}
+@font-face {
+  font-family: 'evesansneue-expandeditalic';
+  src: url('fonts/evesansneue-expandeditalic.otf') format('opentype');
+}
+
+
+.body-bg-black {
+  background-color: #000000;
+}
+.body-bg-image {
+  background-image: url('../images/bg.png');
+  background-size: 100%;
+}
+
+
+@keyframes expand-window-diagonal {
+  from { width: 0px; height: 0px; }
+  to { width: inherit; height: inherit; visibility: visible; }
+}
+@-webkit-keyframes expand-window-diagonal {
+  from { width: 0px; height: 0px; }
+  to { width: inherit; height: inherit; visibility: visible; }
+}
+
+@keyframes expand-window-width-height {
+  0%   { width: 0px; height: 0px; }
+  25%  { width: inherit; height: 0px; visibility: visible; }
+  100% { width: inherit; height: inherit; visibility: visible; }
+}
+@-webkit-keyframes expand-window-width-height {
+  0%   { width: 0px; height: 0px; }
+  25%  { width: inherit; height: 0px; visibility: visible; }
+  100% { width: inherit; height: inherit; visibility: visible; }
+}
+
+@keyframes expand-window-height-width {
+  0%   { width: 0px; height: 0px; }
+  25%  { width: 0px; height: inherit; visibility: visible; }
+  100% { width: inherit; height: inherit; visibility: visible; }
+}
+@-webkit-keyframes expand-window-height-width {
+  0%   { width: 0px; height: 0px; }
+  25%  { width: 0px; height: inherit; visibility: visible; }
+  100% { width: inherit; height: inherit; visibility: visible; }
+}
+
+@keyframes hidden-to-visible {
+  from { visibility: hidden; }
+  to   { visibility: visible; }
+}
+@-webkit-keyframes hidden-to-visible {
+  from { visibility: hidden; }
+  to   { visibility: visible; }
+}
+
+
+/* main window styles */
+.placeholder {
+  position: absolute;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+.window-corner-expand-diagonal {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  height: inherit;
+  width: inherit;
+  visibility: hidden;
+  border: 1px solid #6A8596;
+  animation: expand-window-diagonal forward 1s;
+  -webkit-animation: expand-window-diagonal forwards 1s
+}
+.window-corner-expand-window-height-width {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  height: inherit;
+  width: inherit;
+  visibility: hidden;
+  border: 1px solid #6A8596;
+  animation: expand-window-height-width forward 1s;
+  -webkit-animation: expand-window-height-width forwards 1s
+}
+.window-corner-expand-window-width-height {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  height: inherit;
+  width: inherit;
+  visibility: hidden;
+  border: 1px solid #6A8596;
+  animation: expand-window-width-height forward 1s;
+  -webkit-animation: expand-window-width-height forwards 1s
+}
+.window-inner {
+  position: relative;
+  left: -1px;
+  top: -1px;
+  height: inherit;
+  width: inherit;
+  visibility: inherit;
+  border: 1px solid #21282D;
+  border-radius: 5px;
+  background-color: rgba(21, 23, 27, 0.8);
+}
+/* main window styles */
+
+.image-box {
+  position: relative;
+  visibility: hidden;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  border: 1px solid #999999;
+  animation: hidden-to-visible forward 1s;
+  -webkit-animation: hidden-to-visible forwards 1s
+}
+
+.text-box {
+  position: relative;
+  visibility: hidden;
+  margin: 10px 30px 0px 0px;
+  border: 1px solid #999999;
+  animation: hidden-to-visible forward 1s;
+  -webkit-animation: hidden-to-visible forwards 1s
+}
+.text-white {
+  color: #BCBCBC;
+  font-family: evesansneue-regular;
+}
+.text-gray {
+  color: #7B7B7B;
+  font-family: evesansneue-regular;
+}
