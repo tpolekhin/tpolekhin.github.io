@@ -118,7 +118,7 @@ IMPORT ALL EVE FONTS
   visibility: hidden;
   border: 1px solid #6A8596;
   animation: expand-window-diagonal forward 1s;
-  -webkit-animation: expand-window-diagonal forwards 1s
+  -webkit-animation: expand-window-diagonal forwards 1s;
 }
 .window-corner-expand-window-height-width {
   position: relative;
@@ -129,7 +129,7 @@ IMPORT ALL EVE FONTS
   visibility: hidden;
   border: 1px solid #6A8596;
   animation: expand-window-height-width forward 1s;
-  -webkit-animation: expand-window-height-width forwards 1s
+  -webkit-animation: expand-window-height-width forwards 1s;
 }
 .window-corner-expand-window-width-height {
   position: relative;
@@ -140,7 +140,7 @@ IMPORT ALL EVE FONTS
   visibility: hidden;
   border: 1px solid #6A8596;
   animation: expand-window-width-height forward 1s;
-  -webkit-animation: expand-window-width-height forwards 1s
+  -webkit-animation: expand-window-width-height forwards 1s;
 }
 .window-inner {
   position: relative;
@@ -162,7 +162,7 @@ IMPORT ALL EVE FONTS
   padding: 0px 0px 0px 0px;
   border: 1px solid #999999;
   animation: hidden-to-visible forward 1s;
-  -webkit-animation: hidden-to-visible forwards 1s
+  -webkit-animation: hidden-to-visible forwards 1s;
 }
 
 .text-box {
@@ -171,7 +171,7 @@ IMPORT ALL EVE FONTS
   margin: 10px 30px 0px 0px;
   border: 1px solid #999999;
   animation: hidden-to-visible forward 1s;
-  -webkit-animation: hidden-to-visible forwards 1s
+  -webkit-animation: hidden-to-visible forwards 1s;
 }
 .text-white {
   color: #BCBCBC;

@@ -53,15 +53,187 @@ IMPORT ALL EVE FONTS
 }
 
 
-
-
-
 .body-bg-black {
   background-color: #000000;
 }
 .body-bg-image {
   background-image: url('../images/bg.png');
 }
+
+
+.main-placeholder {
+  position: absolute;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  left: 50px;
+  top: 50px;
+  width: calc(100% - 100px);
+  height: calc(100% - 100px);
+  border: 0px solid red;
+}
+.login-placeholder {
+  position: relative;
+  padding: inherit;
+  margin: inherit;
+  left: calc((100%/2) - 150px);
+  top: calc((100%/2) - 200px);
+  width: 300px;
+  height: 400px;
+  border: 1px solid black;
+}
+
+.login-window-corner {
+  position: relative;
+  padding: inherit;
+  margin: inherit;
+  top: 0px;
+  left: 0px;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  visibility: hidden;
+  border: 1px solid #6A8596;
+  animation: expand-width-both forwards 2s;
+  -webkit-animation: expand-width-both forwards 2s;
+  animation-delay: 2s;
+}
+.login-window-inner {
+  position: relative;
+  left: -1px;
+  top: -1px;
+  height: 100%;
+  width: 100%;
+  visibility: inherit;
+  border: 1px solid #21282D;
+  border-radius: 5px;
+  background-color: rgba(21, 23, 27, 0.8);
+}
+@keyframes expand-width-both {
+  0%   {
+    top: calc(100%/2);
+    left: calc(100%/2);
+    width: 0px;
+    height: 0px;
+  }
+  50%  {
+    top: calc(100%/2);
+    left: 0px;
+    width: calc(100% - 2px);
+    height: 0px;
+    visibility: visible;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    visibility: visible;
+  }
+}
+@-webkit-keyframes expand-width-both {
+  0%   {
+    top: calc(100%/2);
+    left: calc(100%/2);
+    width: 0px;
+    height: 0px;
+  }
+  50%  {
+    top: calc(100%/2);
+    left: 0px;
+    width: calc(100% - 2px);
+    height: 0px;
+    visibility: visible;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    visibility: visible;
+  }
+}
+@keyframes hidden-to-visible {
+  0%   { visibility: hidden; }
+  1%   { visibility: visible; opacity: 0; }
+  100% { visibility: visible; opacity: 1; }
+}
+@-webkit-keyframes hidden-to-visible {
+  0%   { visibility: hidden; }
+  1%   { visibility: visible; opacity: 0; }
+  100% { visibility: visible; opacity: 1; }
+}
+
+
+
+
+.arataka-logo {
+  position: relative;
+
+  top: 50px;
+  left: 50px;
+  width: 200px;
+  height: 200px;
+
+  background-image: url('../images/arclogo200.png');
+  border: 0px solid #21282D;
+  box-sizing: border-box;
+
+  visibility: hidden;
+
+  animation: hidden-to-visible forwards 1s;
+  -webkit-animation: hidden-to-visible forwards 1s;
+  animation-delay: 4.5s;
+}
+.input-box-login {
+  position: relative;
+
+  top: 70px;
+  left: 50px;
+  width: 200px;
+  height: 30px;
+
+  border: 1px solid #21282D;
+
+  color: #7B7B7B;
+  font-family: evesansneue-regular;
+
+  padding: 5px 0px 5px 7px;
+  align-content: center;
+  box-sizing: border-box;
+
+  visibility: hidden;
+
+  animation: hidden-to-visible forwards 1s;
+  -webkit-animation: hidden-to-visible forwards 1s;
+  animation-delay: 4.7s;
+}
+.input-box-passwd {
+  position: relative;
+
+  top: 80px;
+  left: 50px;
+  width: 200px;
+  height: auto;;
+
+  border: 1px solid #21282D;
+
+  color: #7B7B7B;
+  font-family: evesansneue-regular;
+
+  padding: 5px 0px 5px 7px;
+  align-content: center;
+  box-sizing: border-box;
+
+  visibility: hidden;
+
+  animation: hidden-to-visible forwards 1s;
+  -webkit-animation: hidden-to-visible forwards 1s;
+  animation-delay: 4.9s;
+}
+
+
+
+
+
 
 
 .white-outline-left-menu {
