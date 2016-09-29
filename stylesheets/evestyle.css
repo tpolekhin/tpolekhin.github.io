@@ -54,10 +54,11 @@ IMPORT ALL EVE FONTS
 
 
 .body-bg-black {
-  background-color: #000000;
+  background-color: #050505;
 }
 .body-bg-image {
-  background-image: url('../images/bg.png');
+  background-image: url('../images/evebg.jpg');
+  background-size: 100%;
 }
 
 
@@ -108,7 +109,7 @@ IMPORT ALL EVE FONTS
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 0px;
 }
-.window-corner {
+.window-corner-expand-diagonal {
   position: relative;
   left: 0px;
   top: 0px;
@@ -116,9 +117,30 @@ IMPORT ALL EVE FONTS
   width: inherit;
   visibility: hidden;
   border: 1px solid #00FF00;
-  animation-name: expand-window-diagonal;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
+  animation: expand-window-diagonal forward 1s;
+  -webkit-animation: expand-window-diagonal forwards 1s
+}
+.window-corner-expand-window-height-width {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  height: inherit;
+  width: inherit;
+  visibility: hidden;
+  border: 1px solid #00FF00;
+  animation: expand-window-height-width forward 1s;
+  -webkit-animation: expand-window-height-width forwards 1s
+}
+.window-corner-expand-window-width-height {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  height: inherit;
+  width: inherit;
+  visibility: hidden;
+  border: 1px solid #00FF00;
+  animation: expand-window-width-height forward 1s;
+  -webkit-animation: expand-window-width-height forwards 1s
 }
 .window-inner {
   position: relative;
@@ -129,6 +151,7 @@ IMPORT ALL EVE FONTS
   visibility: inherit;
   border: 1px solid #005500;
   border-radius: 5px;
+  background-color: rgba(50, 50, 50, 0.8);
 }
 /* main window styles */
 
@@ -138,9 +161,8 @@ IMPORT ALL EVE FONTS
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 0px;
   border: 1px solid #999999;
-  animation-name: hidden-to-visible;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
+  animation: hidden-to-visible forward 1s;
+  -webkit-animation: hidden-to-visible forwards 1s
 }
 
 .text-box {
@@ -148,7 +170,6 @@ IMPORT ALL EVE FONTS
   visibility: hidden;
   margin: 10px 30px 0px 0px;
   border: 1px solid #999999;
-  animation-name: hidden-to-visible;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
+  animation: hidden-to-visible forward 1s;
+  -webkit-animation: hidden-to-visible forwards 1s
 }
