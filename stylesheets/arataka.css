@@ -51,61 +51,40 @@ IMPORT ALL EVE FONTS
   font-family: 'evesansneue-expandeditalic';
   src: url('fonts/evesansneue-expandeditalic.otf') format('opentype');
 }
+/*
+IMPORT ALL EVE FONTS
+*/
 
-
-.body-bg-black {
-  background-color: #000000;
+/*
+ALL ANIMATIONS ALL
+*/
+@keyframes hidden-to-visible {
+  0%   { visibility: hidden; }
+  1%   { visibility: visible; opacity: 0; }
+  100% { visibility: visible; opacity: 1; }
 }
-.body-bg-image {
-  background-image: url('../images/bg.png');
+@-webkit-keyframes hidden-to-visible {
+  0%   { visibility: hidden; }
+  1%   { visibility: visible; opacity: 0; }
+  100% { visibility: visible; opacity: 1; }
 }
-
-
-.main-placeholder {
-  position: absolute;
-  padding: 0px 0px 0px 0px;
-  margin: 0px 0px 0px 0px;
-  left: 50px;
-  top: 50px;
-  width: calc(100% - 100px);
-  height: calc(100% - 100px);
-  border: 0px solid red;
+@keyframes hidden-to-visible-fliker {
+  0%   { visibility: hidden; }
+  1%   { visibility: visible; opacity: 0; }
+  10%  { visibility: visible; opacity: 1; }
+  20%  { visibility: visible; opacity: 0; }
+  30%  { visibility: visible; opacity: 1; }
+  40%  { visibility: visible; opacity: 0; }
+  100% { visibility: visible; opacity: 1; }
 }
-.login-placeholder {
-  position: relative;
-  padding: inherit;
-  margin: inherit;
-  left: calc((100%/2) - 150px);
-  top: calc((100%/2) - 200px);
-  width: 300px;
-  height: 400px;
-  border: 1px solid black;
-}
-
-.login-window-corner {
-  position: relative;
-  padding: inherit;
-  margin: inherit;
-  top: 0px;
-  left: 0px;
-  width: calc(100% - 2px);
-  height: calc(100% - 2px);
-  visibility: hidden;
-  border: 1px solid #6A8596;
-  animation: expand-width-both forwards 2s;
-  -webkit-animation: expand-width-both forwards 2s;
-  animation-delay: 2s;
-}
-.login-window-inner {
-  position: relative;
-  left: -1px;
-  top: -1px;
-  height: 100%;
-  width: 100%;
-  visibility: inherit;
-  border: 1px solid #21282D;
-  border-radius: 5px;
-  background-color: rgba(21, 23, 27, 0.8);
+@-webkit-keyframes hidden-to-visible-fliker {
+  0%   { visibility: hidden; }
+  1%   { visibility: visible; opacity: 0; }
+  7%   { visibility: visible; opacity: 0.1; }
+  14%  { visibility: visible; opacity: 0; }
+  21%  { visibility: visible; opacity: 0.1; }
+  28%  { visibility: visible; opacity: 0; }
+  100% { visibility: visible; opacity: 1; }
 }
 @keyframes expand-width-both {
   0%   {
@@ -151,24 +130,108 @@ IMPORT ALL EVE FONTS
     visibility: visible;
   }
 }
-@keyframes hidden-to-visible {
-  0%   { visibility: hidden; }
-  1%   { visibility: visible; opacity: 0; }
-  100% { visibility: visible; opacity: 1; }
+@keyframes expand-window-diagonal {
+  from { width: 0px; height: 0px; }
+  to { width: inherit; height: inherit; visibility: visible; }
 }
-@-webkit-keyframes hidden-to-visible {
-  0%   { visibility: hidden; }
-  1%   { visibility: visible; opacity: 0; }
-  100% { visibility: visible; opacity: 1; }
+@-webkit-keyframes expand-window-diagonal {
+  from { width: 0px; height: 0px; }
+  to { width: inherit; height: inherit; visibility: visible; }
 }
 
+@keyframes expand-window-width-height {
+  0%   { width: 0px; height: 0px; }
+  25%  { width: inherit; height: 0px; visibility: visible; }
+  100% { width: inherit; height: inherit; visibility: visible; }
+}
+@-webkit-keyframes expand-window-width-height {
+  0%   { width: 0px; height: 0px; }
+  25%  { width: inherit; height: 0px; visibility: visible; }
+  100% { width: inherit; height: inherit; visibility: visible; }
+}
+
+@keyframes expand-window-height-width {
+  0%   { width: 0px; height: 0px; }
+  25%  { width: 0px; height: inherit; visibility: visible; }
+  100% { width: inherit; height: inherit; visibility: visible; }
+}
+@-webkit-keyframes expand-window-height-width {
+  0%   { width: 0px; height: 0px; }
+  25%  { width: 0px; height: inherit; visibility: visible; }
+  100% { width: inherit; height: inherit; visibility: visible; }
+}
+/*
+ALL ANIMATIONS ALL
+*/
+
+/*
+ALL SHARED ALL
+*/
+.body-bg-black {
+  background-color: #000000;
+}
+.body-bg-image {
+  background-image: url('../images/bg.png');
+}
+.placeholder-main {
+  position: absolute;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  top: 50px;
+  left: 50px;
+  width: calc(100% - 100px);
+  height: calc(100% - 100px);
+  border: 1px dotted red;
+}
+/*
+ALL SHARED ALL
+*/
 
 
+/*
+ALL LOGIN WINDOW ALL
+*/
+.login-placeholder {
+  position: relative;
+  padding: inherit;
+  margin: inherit;
+  left: calc((100%/2) - 150px);
+  top: calc((100%/2) - 200px);
+  width: 300px;
+  height: 400px;
+  border: 1px solid black;
+}
+
+.login-window-corner {
+  position: relative;
+  padding: inherit;
+  margin: inherit;
+  top: 0px;
+  left: 0px;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  visibility: hidden;
+  border: 1px solid #6A8596;
+  animation: expand-width-both forwards 2s;
+  -webkit-animation: expand-width-both forwards 2s;
+  animation-delay: 2s;
+}
+.login-window-inner {
+  position: relative;
+  left: -1px;
+  top: -1px;
+  height: 100%;
+  width: 100%;
+  visibility: inherit;
+  border: 1px solid #21282D;
+  border-radius: 5px;
+  background-color: rgba(21, 23, 27, 0.8);
+}
 
 .arataka-logo {
   position: relative;
 
-  top: 50px;
+  top: 25px;
   left: 50px;
   width: 200px;
   height: 200px;
@@ -179,17 +242,17 @@ IMPORT ALL EVE FONTS
 
   visibility: hidden;
 
-  animation: hidden-to-visible forwards 1s;
-  -webkit-animation: hidden-to-visible forwards 1s;
+  animation: hidden-to-visible-fliker forwards 1s;
+  -webkit-animation: hidden-to-visible-fliker forwards 1s;
   animation-delay: 4.5s;
 }
 .input-box-login {
   position: relative;
 
-  top: 70px;
+  top: 50px;
   left: 50px;
   width: 200px;
-  height: 30px;
+  height: auto;
 
   border: 1px solid #21282D;
 
@@ -209,10 +272,10 @@ IMPORT ALL EVE FONTS
 .input-box-passwd {
   position: relative;
 
-  top: 80px;
+  top: 60px;
   left: 50px;
   width: 200px;
-  height: auto;;
+  height: auto;
 
   border: 1px solid #21282D;
 
@@ -230,95 +293,311 @@ IMPORT ALL EVE FONTS
   animation-delay: 4.9s;
 }
 
+.button-login {
+  position: relative;
+
+  top: 80px;
+  left: 105px;
+  width: 90px;
+  height: auto;
+
+  border: 1px solid #21282D;
+  background-color: #21282D;
+
+  color: #7B7B7B;
+  font-family: evesansneue-regular;
+
+  padding: 5px 0px 5px 0px;
+  text-align: center;
+  box-sizing: border-box;
+
+  visibility: hidden;
+
+  animation: hidden-to-visible forwards 1s;
+  -webkit-animation: hidden-to-visible forwards 1s;
+  animation-delay: 5s;
+}
+.button-login:hover {
+  color: #BCBCBC;
+
+/* gradient background */
+  /*background-image:
+    radial-gradient(circle farthest-corner, #6A8596, #21282D);
+  -webkit-background-image:
+    -webkit-radial-gradient(circle farthest-corner, #6A8596, #21282D);
+  -moz-background-image:
+    -moz-radial-gradient(circle farthest-corner, #6A8596, #21282D);
+  -o-background-image:
+    -o-radial-gradient(circle farthest-corner, #6A8596, #21282D);*/
+/* gradient background */
+
+/* gradient borders */
+  border-image:
+    linear-gradient(to left, #21282D, #6A8596, #21282D) 1;
+  -webkit-border-image:
+    -webkit-linear-gradient(to left, #21282D, #6A8596, #21282D) 1;
+  -moz-border-image:
+    -moz-linear-gradient(to left, #21282D, #6A8596, #21282D) 1;
+  -o-border-image:
+    -o-linear-gradient(to left, #21282D, #6A8596, #21282D) 1;
+/* gradient borders */
+}
+.button-guest {
+  position: relative;
+
+  top: 0px;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+
+  border: 1px solid #21282D;
+
+  color: #7B7B7B;
+  font-family: evesansneue-regular;
+
+  visibility: hidden;
+
+  animation: hidden-to-visible forwards 1s;
+  -webkit-animation: hidden-to-visible forwards 1s;
+  animation-delay: 7s;
+}
+/*
+ALL LOGIN WINDOW ALL
+*/
 
 
 
 
-
-
-.white-outline-left-menu {
+/*
+ALL MAIN TERMINAL WINDOW ALL
+*/
+.placeholder {
   position: absolute;
-  left: 50px;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+.window-arataka-logo {
+  position: absolute;
   top: 50px;
-  width: 350px;
-  height: calc(100% - 100px);
-
-  border: 1px solid #EFEFEF;
-
-  color: #EFEFEF;
-  font-size: 20px;
-  font-style: normal;
-  font-family: sans-serif;
+  left: calc(100%/6);
+  width: 300px;
+  height: 180px;
+  visibility: hidden;
+  border: 1px solid #6A8596;
+  animation: expand-window-diagonal forwards 1s;
+  -webkit-animation: expand-window-diagonal forwards 1s;
+  animation-delay: 1s;
 }
-
-
-.white-outline-main-window {
+.window-arataka-banner {
   position: absolute;
-  left: 420px;
   top: 50px;
-  width: calc(100% - 470px);
-  height: calc(100% - 100px);
-
-  border: 1px solid #EFEFEF;
-
-  color: #EFEFEF;
-  font-size: 20px;
-  font-style: normal;
-  font-family: sans-serif;
+  left: calc(100%/6 + 320px);
+  width: 1200px;
+  height: 180px;
+  visibility: hidden;
+  border: 1px solid #6A8596;
+  animation: expand-window-height-width forwards 1s;
+  -webkit-animation: expand-window-height-width forwards 1s;
+  animation-delay: 1.2s;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.window-corner {
+.window-arataka-menu {
   position: absolute;
-  margin: 0;
-  padding: 0;
-  width: 200px;
-  height: 200px;
-  border: 1px solid #00FF00;
+  top: 250px;
+  left: calc(100%/6);
+  width: 300px;
+  height: 800px;
+  visibility: hidden;
+  border: 1px solid #6A8596;
+  animation: expand-window-width-height forwards 1s;
+  -webkit-animation: expand-window-width-height forwards 1s;
+  animation-delay: 1.2s;
 }
-
+.window-arataka-content {
+  position: absolute;
+  top: 250px;
+  left: calc(100%/6 + 320px);
+  width: 1200px;
+  height: 800px;
+  visibility: hidden;
+  border: 1px solid #6A8596;
+  animation: expand-window-width-height forwards 1s;
+  -webkit-animation: expand-window-width-height forwards 1s;
+  animation-delay: 1.7s;
+}
+.window-content-inner {
+  position: relative;
+  left: -1px;
+  top: -1px;
+  height: inherit;
+  width: inherit;
+  visibility: inherit;
+  border: 1px solid #21282D;
+  border-radius: 5px;
+  background-color: rgba(21, 23, 27, 0.8);
+  overflow: scroll;
+}
 .window-inner {
   position: relative;
   left: -1px;
   top: -1px;
-  height: calc(100% + 2px);
-  width: calc(100% + 2px);
+  height: inherit;
+  width: inherit;
+  visibility: inherit;
+  border: 1px solid #21282D;
   border-radius: 5px;
+  background-color: rgba(21, 23, 27, 0.8);
 }
+/* custom style scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  background: #15171B;
+}
+::-webkit-scrollbar-thumb {
+  background: #15171B;
+  border: 1px solid #21282D;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: #15171B;
+}
+/*
+ALL MAIN TERMINAL WINDOW ALL
+*/
 
-.window-border-tb {
+/*
+ALL MAIN TERMINAL CONTENT ALL
+*/
+.terminal-arataka-logo {
   position: relative;
-  left: 3px;
   top: 0;
-  width: calc(100% - 6px);
-  height: calc(100% - 2px);
-  border-top: 1px solid #005500;
-  border-bottom: 1px solid #005500;
+  left: 0;
+  width: 300px;
+  height: 180px;
+  background-image: url('../images/arataka-logo.png');
+  visibility: hidden;
+  animation: hidden-to-visible-fliker forwards 1s;
+  -webkit-animation: hidden-to-visible-fliker forwards 1s;
+  animation-delay: 2s;
 }
-
-.window-border-lr {
+.image-box {
+  box-sizing: border-box;
   position: relative;
-  left: -3px;
-  top: 2px;
-  width: calc(100% + 4px);
-  height: calc(100% - 4px);;
-  border-left: 1px solid #005500;
-  border-right: 1px solid #005500;
+  visibility: hidden;
+  overflow: hidden;
+  margin: 10px 10px 10px 10px;
+  padding: 0px 0px 0px 0px;
+  border: 1px solid #999999;
+  animation: hidden-to-visible forward 1s;
+  -webkit-animation: hidden-to-visible forwards 1s;
+}
+.text-box {
+  box-sizing: border-box;
+  position: relative;
+  visibility: hidden;
+  margin: 10px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
+  border: 1px solid #999999;
+  overflow: hidden;
+  animation: hidden-to-visible forward 1s;
+  -webkit-animation: hidden-to-visible forwards 1s;
+}
+.text-white {
+  color: #BCBCBC;
+  font-family: evesansneue-regular;
+}
+.text-gray {
+  color: #7B7B7B;
+  font-family: evesansneue-regular;
+}
+.text-white-path {
+  color: #BCBCBC;
+  font-family: evesansneue-regular;
+  font-size: 64px;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  text-align: left;
+}
+/*
+ALL MAIN TERMINAL CONTENT ALL
+*/
+.left-menu-placeholder {
+  box-sizing: border-box;
+  position: relative;
+  visibility: hidden;
+  margin: 10px 10px 10px 10px;
+  border: 1px dotted red;
+  animation: hidden-to-visible forward 1s;
+  -webkit-animation: hidden-to-visible forwards 1s;
+  animation-delay: 2s;
+}
+.left-menu-item {
+  position: relative;
+  visibility: hidden;
+  margin: 5px 10px 5px 10px;
+  padding: 5px 5px 5px 10px;
+  border: 1px solid #15171B;
+  background-color: #15171B;
+  color: #7B7B7B;
+  font-family: evesansneue-regular;
+  animation: hidden-to-visible forward 1s;
+  -webkit-animation: hidden-to-visible forwards 1s;
+  animation-delay: 2s;
+}
+.left-menu-item:hover {
+  padding: 5px 5px 5px 15px;
+  background-color: #15171B;
+  /* gradient borders */
+    border-image:
+      linear-gradient(top, #21282D, #6A8596, #21282D) 0 0 0 100%;
+    -webkit-border-image:
+      -webkit-linear-gradient(top, #21282D, #6A8596, #21282D) 0 0 0 100%;
+    -moz-border-image:
+      -moz-linear-gradient(top, #21282D, #6A8596, #21282D) 0 0 0 100%;
+    -o-border-image:
+      -o-linear-gradient(top, #21282D, #6A8596, #21282D) 0 0 0 100%;
+  /* gradient borders */
 }
 
-.window-caption {
+button.left-menu-item {
+  position: relative;
+  visibility: hidden;
+  margin: 8px 2px 2px 8px;
   padding: 5px 5px 5px 10px;
-  color: #00FF00;
+  text-align: left;
+  width: 150px;
+  height: auto;
+  border: 1px solid #21282D;
+  background-color: #15171B;
+  color: #7B7B7B;
+  font-family: evesansneue-regular;
+  font-size: 16px;
+  animation: hidden-to-visible forward 1s;
+  -webkit-animation: hidden-to-visible forwards 1s;
+  animation-delay: 2s;
+}
+button.left-menu-item:hover {
+  color: #BCBCBC;
+
+/* gradient background */
+  /*background-image:
+    radial-gradient(circle farthest-corner, #6A8596, #21282D);
+  -webkit-background-image:
+    -webkit-radial-gradient(circle farthest-corner, #6A8596, #21282D);
+  -moz-background-image:
+    -moz-radial-gradient(circle farthest-corner, #6A8596, #21282D);
+  -o-background-image:
+    -o-radial-gradient(circle farthest-corner, #6A8596, #21282D);*/
+/* gradient background */
+
+/* gradient borders */
+  border-image:
+    linear-gradient(to left, #21282D, #6A8596, #21282D) 1;
+  -webkit-border-image:
+    -webkit-linear-gradient(to left, #21282D, #6A8596, #21282D) 1;
+  -moz-border-image:
+    -moz-linear-gradient(to left, #21282D, #6A8596, #21282D) 1;
+  -o-border-image:
+    -o-linear-gradient(to left, #21282D, #6A8596, #21282D) 1;
+/* gradient borders */
+
 }
